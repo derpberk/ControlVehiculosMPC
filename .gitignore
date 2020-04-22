@@ -1,0 +1,4 @@
+init_tmux.sh
+slprj/
+*.slxc
+*.swp
