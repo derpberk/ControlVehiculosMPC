@@ -13,7 +13,7 @@ e_d=in(3);
 		else
 			modo_control=1;
 		end
-	else 
+	elseif modo_control_ant==2
 		% control de distancia
 		if(e_u<0)
 			% El coche lider va demasiado rápido, se cambia a control de velocidad y se deja ir
@@ -21,6 +21,11 @@ e_d=in(3);
 		else
 			modo_control=2;
 		end
+	else 
+		% Valor inválido de variable "modo_control_ant" 
+		% Esto ocurre en la primera interación de la simulación 
+		% Se deja inicializado al control de velocidad 
+		modo_control=1;  
 	end
 
 end
